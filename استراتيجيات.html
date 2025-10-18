@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراتيجيات تدريبية مطبقة - الفصل التدريبي الأول 1447هـ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --primary-green: #0f9d58;
+            --light-green: #e6f4ea;
+            --dark-green: #0a7e48;
+            --light-bg: #f8f9fa;
+            --dark-text: #202124;
+            --light-text: #5f6368;
+            --border-color: #dadce0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-left: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .strategies-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .strategy {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border-right: 4px solid var(--primary-green);
+        }
+        
+        .strategy:hover {
+            transform: translateY(-5px);
+        }
+        
+        .strategy-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            background-color: var(--primary-green);
+        }
+        
+        .strategy-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-left: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .strategy-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .strategy-content {
+            padding: 25px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .section-title span {
+            margin-left: 10px;
+        }
+        
+        .section-content {
+            padding-right: 30px;
+            color: var(--dark-text);
+        }
+        
+        .objectives-list, .impact-list {
+            list-style-type: none;
+        }
+        
+        .objectives-list li, .impact-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .objectives-list li:before, .impact-list li:before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+            padding: 20px 0;
+            margin-top: auto;
+            text-align: center;
+            color: var(--light-text);
+        }
+        
+        @media (max-width: 768px) {
+            .strategy-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .strategy-icon {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="logo-text">استراتيجيات التدريب</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>استراتيجيات تدريبية مطبقة</h1>
+        <div class="subtitle">الفصل التدريبي الأول - 1447 هـ</div>
+        
+        <div class="strategies-container">
+            <!-- ريادة الأعمال -->
+            <div class="strategy">
+                <div class="strategy-header">
+                    <div class="strategy-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <div class="strategy-title">أساسيات ريادة الأعمال - رياد 101</div>
+                </div>
+                
+                <div class="strategy-content">
+                    <div class="section">
+                        <div class="section-title">
+                            <span>📌</span> وصف الاستراتيجية
+                        </div>
+                        <div class="section-content">
+                            تُطبّق هذه الاستراتيجية من خلال تكليف المتدربات بتصميم مشروع ريادي مصغّر يحاكي تجربة تأسيس مشروع حقيقي، بدءًا من تحديد الفكرة، مرورًا بدراسة السوق والجمهور المستهدف، وانتهاءً بإعداد نموذج عمل أولي (Business Model Canvas). تعمل المتدربات ضمن فرق عمل صغيرة لتوزيع المهام بين الجوانب التسويقية، المالية، والإدارية، مع تقديم عرض نهائي يوضّح فكرة المشروع وكيفية تطويره.
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">
+                            <span>🎯</span> أهداف الاستراتيجية
+                        </div>
+                        <div class="section-content">
+                            <ul class="objectives-list">
+                                <li>تنمية روح ريادة الأعمال من خلال التجربة العملية.</li>
+                                <li>تعزيز مهارات التفكير الابتكاري في تصميم الأفكار التجارية.</li>
+                                <li>تدريب المتدربات على تحليل الأسواق وتحديد احتياجات العملاء.</li>
+                                <li>إكساب مهارات إعداد نموذج العمل التجاري والتخطيط المالي المبسط.</li>
+                                <li>تشجيع العمل الجماعي واتخاذ القرار المشترك.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">
+                            <span>🌿</span> الأثر المتوقع
+                        </div>
+                        <div class="section-content">
+                            <ul class="impact-list">
+                                <li>زيادة وعي المتدربات بمراحل بناء المشروع الريادي.</li>
+                                <li>تنمية الثقة بالنفس في طرح الأفكار الريادية أمام الجمهور.</li>
+                                <li>اكتساب مهارات عملية في التخطيط، التنظيم، والعرض.</li>
+                                <li>تحفيز روح المبادرة والتفكير التجاري الواقعي.</li>
+                                <li>دعم جاهزية المتدربات للانخراط في بيئة ريادة الأعمال مستقبلاً.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الرياضيات -->
+            <div class="strategy">
+                <div class="strategy-header">
+                    <div class="strategy-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <div class="strategy-title">الرياضيات العامة - رياض 101</div>
+                </div>
+                
+                <div class="strategy-content">
+                    <div class="section">
+                        <div class="section-title">
+                            <span>📌</span> وصف الاستراتيجية
+                        </div>
+                        <div class="section-content">
+                            يتم تطبيق هذه الاستراتيجية من خلال طرح مشكلة رياضية حقيقية أو تطبيقية ترتبط بسياق الحياة العملية (مثل حساب تكلفة مشروع، أو تحليل بيانات مالية). تُقسّم المتدربات إلى مجموعات لحل المشكلة بخطوات منهجية تبدأ بفهم المعطيات، اقتراح طرق الحل، تنفيذ العمليات الحسابية، ثم مناقشة النتائج وربطها بالمفاهيم الرياضية ذات الصلة.
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">
+                            <span>🎯</span> أهداف الاستراتيجية
+                        </div>
+                        <div class="section-content">
+                            <ul class="objectives-list">
+                                <li>تعزيز التفكير النقدي والتحليلي في حل المشكلات.</li>
+                                <li>تمكين المتدربات من توظيف المفاهيم الرياضية في مواقف حياتية.</li>
+                                <li>تنمية مهارة البحث عن الحلول المتعددة واختيار الأنسب.</li>
+                                <li>تشجيع العمل التعاوني ومهارات التواصل في مناقشة الحلول.</li>
+                                <li>ربط المعرفة النظرية بالرياضيات بتطبيقات واقعية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">
+                            <span>🌿</span> الأثر المترتب
+                        </div>
+                        <div class="section-content">
+                            <ul class="impact-list">
+                                <li>رفع مستوى الفهم العميق للمفاهيم الرياضية.</li>
+                                <li>زيادة دافعية المتدربات نحو المشاركة الفاعلة في المقرر.</li>
+                                <li>تنمية مهارات التحليل والتفسير المنطقي للبيانات.</li>
+                                <li>تعزيز الثقة في استخدام الرياضيات كأداة لفهم الواقع العملي.</li>
+                                <li>تحسين جودة الأداء الأكاديمي والتفكير المنطقي المنظم.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 - المدربة: شروق الحربي</p>
+        </div>
+    </footer>
+</body>
+</html>
