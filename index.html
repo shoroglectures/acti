@@ -60,7 +60,7 @@
         }
         
         .logo-img {
-            height: 75px; /* تم التكبير من 50px إلى 100px */
+            height: 75px;
             margin-left: 15px;
         }
         
@@ -118,6 +118,7 @@
             font-weight: 700;
         }
         
+        /* تصميم الجدول للشاشات الكبيرة */
         .strategies-table {
             width: 100%;
             border-collapse: collapse;
@@ -180,6 +181,48 @@
             font-weight: bold;
         }
         
+        /* تصميم البطاقات للشاشات الصغيرة */
+        .strategies-cards {
+            display: none;
+            margin: 20px 0;
+        }
+        
+        .strategy-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-right: 3px solid var(--primary-green);
+        }
+        
+        .card-header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 15px;
+            font-weight: 700;
+        }
+        
+        .card-body {
+            padding: 15px;
+        }
+        
+        .card-section {
+            margin-bottom: 15px;
+        }
+        
+        .card-section-title {
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-section-title i {
+            margin-left: 8px;
+        }
+        
         .evidence-section {
             text-align: center;
             margin: 40px 0;
@@ -221,10 +264,37 @@
             color: var(--light-text);
         }
         
+        /* استعلامات الوسائط المحسنة */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .course-title {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .strategies-table th,
+            .strategies-table td {
+                padding: 12px 10px;
+            }
+            
+            .strategy-name {
+                width: 180px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .course-header {
                 flex-direction: column;
                 text-align: center;
+                padding: 15px;
             }
             
             .course-icon {
@@ -241,17 +311,91 @@
                 gap: 15px;
             }
             
+            /* إخفاء الجدول وإظهار البطاقات */
             .strategies-table {
+                display: none;
+            }
+            
+            .strategies-cards {
                 display: block;
-                overflow-x: auto;
             }
             
             .logo-img {
-                height: 80px;
+                height: 70px;
             }
             
             .trainer-name {
                 font-size: 1.1rem;
+                text-align: center;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .course-title {
+                font-size: 1.2rem;
+            }
+            
+            .evidence-icon i {
+                font-size: 2.5rem;
+            }
+            
+            .evidence-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .logo-img {
+                height: 60px;
+            }
+            
+            .course-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-header {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+            
+            .card-body {
+                padding: 12px;
+            }
+            
+            .evidence-icon {
+                padding: 12px;
+            }
+            
+            .evidence-icon i {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            
+            .course-title {
+                font-size: 1rem;
+            }
+            
+            .trainer-name {
+                font-size: 1rem;
+            }
+            
+            .logo-img {
+                height: 50px;
             }
         }
     </style>
@@ -281,6 +425,7 @@
             </div>
             
             <div class="course-content">
+                <!-- الجدول للشاشات الكبيرة -->
                 <table class="strategies-table">
                     <thead>
                         <tr>
@@ -758,6 +903,11 @@
                         </tr>
                     </tbody>
                 </table>
+                
+                <!-- البطاقات للشاشات الصغيرة -->
+                <div class="strategies-cards">
+                    <!-- سيتم إضافة البطاقات هنا باستخدام JavaScript -->
+                </div>
             </div>
         </div>
 
@@ -783,6 +933,66 @@
             alert('سيتم إضافة رابط الشواهد لاحقاً');
             // يمكن استبدال alert بالرابط الفعلي عندما يتوفر
             // window.location.href = 'رابط_الشواهد_هنا';
+        });
+        
+        // إنشاء البطاقات للشاشات الصغيرة
+        document.addEventListener('DOMContentLoaded', function() {
+            const strategies = [
+                {
+                    name: 'المحاكاة والنمذجة "الربط بالواقع وسوق العمل"',
+                    description: 'استخدام نماذج محاكاة للواقع العملي في ريادة الأعمال والرياضيات التطبيقية، حيث تمثل المتدربات أدوارًا في سيناريوهات حقيقية مثل إدارة مشروع ريادي أو تطبيق مفاهيم رياضية في حل مشكلات الأعمال.',
+                    objectives: [
+                        'ربط المفاهيم النظرية بالواقع العمليطبيقات العملية للمقررات',
+                        'تحسين الجاهزية لسوق العمل',
+                        'تنمية الثقة في التعامل مع المواقف الحقيقية'
+                    ],
+                    outputs: [
+                        'تقارير تحليل سيناريوهات المحاكاة',
+                        'عروض تقديمية لتجارب المحاكاة',
+                        'تقييم أداء المتدربات في بيئة المحاكاة'
+                    ]
+                },
+                // يمكن إضافة باقي الاستراتيجيات هنا بنفس الهيكل
+            ];
+            
+            const cardsContainer = document.querySelector('.strategies-cards');
+            
+            // إضافة أول بطاقة كمثال (يمكن إضافة البطاقات الأخرى بنفس الطريقة)
+            if (cardsContainer) {
+                const strategy = strategies[0];
+                const card = document.createElement('div');
+                card.className = 'strategy-card';
+                
+                card.innerHTML = `
+                    <div class="card-header">${strategy.name}</div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <div class="card-section-title"><i class="fas fa-info-circle"></i> الوصف</div>
+                            <div>${strategy.description}</div>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title"><i class="fas fa-bullseye"></i> الأهداف</div>
+                            <ul class="objectives-list">
+                                ${strategy.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title"><i class="fas fa-chart-line"></i> الأثر المتوقع</div>
+                            <ul class="impact-list">
+                                ${strategy.impact.map(imp => `<li>${imp}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title"><i class="fas fa-tasks"></i> النتاج النهائي</div>
+                            <ul class="outputs-list">
+                                ${strategy.outputs.map(out => `<li>${out}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                
+                cardsContainer.appendChild(card);
+            }
         });
     </script>
 </body>
