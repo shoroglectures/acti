@@ -60,7 +60,7 @@
         }
         
         .logo-img {
-            height: 75px; /* تم التكبير من 50px إلى 100px */
+            height: 75px;
             margin-left: 15px;
         }
         
@@ -761,9 +761,9 @@
             </div>
         </div>
 
-        <!-- قسم الشواهد -->
+        <!-- قسم الشواهد فقط -->
         <div class="evidence-section">
-            <a href="https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EsfRy3ZUYnpJgSpWxfekbqYBzD8GzZvZgU-UtPoS4wQtkg?e=DHSewq" class="evidence-icon" id="evidenceLink">
+            <a href="https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EsfRy3ZUYnpJgSpWxfekbqYBzD8GzZvZgU-UtPoS4wQtkg?e=DHSewq" class="evidence-icon" id="evidenceLink" target="_blank">
                 <i class="fas fa-certificate"></i>
                 <span class="evidence-text">الشواهد</span>
             </a>
@@ -777,13 +777,8 @@
     </footer>
 
     <script>
-        // إضافة رابط الشواهد لاحقاً
-        document.getElementById('evidenceLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('سيتم إضافة رابط الشواهد لاحقاً');
-            // يمكن استبدال alert بالرابط الفعلي عندما يتوفر
-            // window.location.href = 'رابط_الشواهد_هنا';
-        });
+        // إضافة target="_blank" لرابط الشواهد ليفتح في صفحة جديدة
+        document.getElementById('evidenceLink').setAttribute('target', '_blank');
     </script>
 </body>
 </html>
